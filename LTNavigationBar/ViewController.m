@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "UINavigationBar+BackgroundColor.h"
 
-#define NAVBAR_COLOR [UIColor colorWithRed:0/255.0 green:175/255.0 blue:240/255.0 alpha:1];
+#define NAVBAR_CHANGE_POINT 50
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -23,23 +23,32 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
-    
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
-    [self.navigationController.navigationBar setShadowImage:[UIImage new]];
-    
+     [self.navigationController.navigationBar useBackgroundColor:[UIColor clearColor]];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     UIColor * color = [UIColor colorWithRed:0/255.0 green:175/255.0 blue:240/255.0 alpha:1];
     CGFloat offsetY = scrollView.contentOffset.y;
-    if (offsetY > 50) {
-        CGFloat alpha = 1 - ((114 - offsetY) / 64);
+    if (offsetY > NAVBAR_CHANGE_POINT) {
+        CGFloat alpha = 1 - ((NAVBAR_CHANGE_POINT + 64 - offsetY) / 64);
         
-        [self.navigationController.navigationBar setBgColor:[color colorWithAlphaComponent:alpha]];
+        [self.navigationController.navigationBar useBackgroundColor:[color colorWithAlphaComponent:alpha]];
     } else {
-        [self.navigationController.navigationBar setBgColor:[color colorWithAlphaComponent:0]];
+        [self.navigationController.navigationBar useBackgroundColor:[color colorWithAlphaComponent:0]];
     }
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    [self scrollViewDidScroll:self.tableView];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self.navigationController.navigationBar reset];
 }
 
 #pragma mark UITableViewDatasource
@@ -64,7 +73,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 60;
+    return 65;
 }
 
 

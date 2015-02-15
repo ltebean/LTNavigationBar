@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UINavigationBar (BackgroundColor)
-@property (nonatomic, strong) UIView *bgView;
-- (void)setBgColor:(UIColor *)bgColor;
+@property (nonatomic, strong) UIView *overlay;
+- (void)useBackgroundColor:(UIColor *)backgroundColor;
+- (void)reset;
 @end
