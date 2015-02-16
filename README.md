@@ -1,4 +1,4 @@
-![LTNavigationbar](https://cocoapod-badges.herokuapp.com/v/LTNavigationbar/badge.png)
+![LTNavigationbar](https://cocoapod-badges.herokuapp.com/v/LTNavigationBar/badge.png)
 
 It is hard to change the background color of UINavigationBar along with the status bar dynamically, so I made this lib to make the job easy.
 
