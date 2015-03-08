@@ -5,7 +5,7 @@ It is hard to change the appearance of UINavigationBar dynamically, so I made th
 
 
 ## Demo
-#### 1. Changing the background:
+#### 1. Changing the background color:
 ![LTNavigationbar](https://raw.githubusercontent.com/ltebean/LTNavigationBar/master/images/demo.gif)
 
 
