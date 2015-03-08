@@ -39,7 +39,7 @@ And usually in `viewWillDisappear`, you should call this method to avoid any sid
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    [self.navigationController.navigationBar reset];
+    [self.navigationController.navigationBar lt_reset];
 }
 ```
 
