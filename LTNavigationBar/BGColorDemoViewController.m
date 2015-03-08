@@ -6,16 +6,16 @@
 //  Copyright (c) 2015年 ltebean. All rights reserved.
 //
 
-#import "ViewController.h"
-#import "UINavigationBar+BackgroundColor.h"
+#import "BGColorDemoViewController.h"
+#import "UINavigationBar+Awesome.h"
 
 #define NAVBAR_CHANGE_POINT 50
 
-@interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface BGColorDemoViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end
 
-@implementation ViewController
+@implementation BGColorDemoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -23,7 +23,7 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
-     [self.navigationController.navigationBar useBackgroundColor:[UIColor clearColor]];
+    [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor clearColor]];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
@@ -33,9 +33,9 @@
     if (offsetY > NAVBAR_CHANGE_POINT) {
         CGFloat alpha = 1 - ((NAVBAR_CHANGE_POINT + 64 - offsetY) / 64);
         
-        [self.navigationController.navigationBar useBackgroundColor:[color colorWithAlphaComponent:alpha]];
+        [self.navigationController.navigationBar lt_setBackgroundColor:[color colorWithAlphaComponent:alpha]];
     } else {
-        [self.navigationController.navigationBar useBackgroundColor:[color colorWithAlphaComponent:0]];
+        [self.navigationController.navigationBar lt_setBackgroundColor:[color colorWithAlphaComponent:0]];
     }
 }
 
@@ -48,7 +48,7 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    [self.navigationController.navigationBar reset];
+    [self.navigationController.navigationBar lt_reset];
 }
 
 #pragma mark UITableViewDatasource

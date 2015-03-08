@@ -1,22 +1,41 @@
 ![LTNavigationbar](https://cocoapod-badges.herokuapp.com/v/LTNavigationBar/badge.png)
 
-It is hard to change the background color of UINavigationBar along with the status bar dynamically, so I made this lib to make the job easy.
+## Purpose
+It is hard to change the appearance of UINavigationBar dynamically, so I made this lib to make the job easy.
 
-![LTNavigationbar](https://raw.githubusercontent.com/ltebean/LTNavigationBar/master/demo.gif)
+
+## Demo
+#### 1.changing the background:
+![LTNavigationbar](https://raw.githubusercontent.com/ltebean/LTNavigationBar/master/images/demo.gif)
+
+
+#### 2.Making navigation bar scroll along with a scroll view:
+![LTNavigationbar](https://raw.githubusercontent.com/ltebean/LTNavigationBar/master/images/demo2.gif)
 
 ## Usage
 
-Step one:
+First, import this lib:
 ```objective-c
-#import "UINavigationBar+BackgroundColor.h"
+#import "UINavigationBar+Awesome.h"
 ```
 
-Step two: update the background color wherever you want
+The category includes lots of method that helps to change UINavigationBar's appearance dynamically:
+```objective-c
+@interface UINavigationBar (Awesome)
+- (void)lt_setBackgroundColor:(UIColor *)backgroundColor;
+- (void)lt_setContentAlpha:(CGFloat)alpha;
+- (void)lt_setTranslationY:(CGFloat)translationY;
+- (void)lt_reset;
+@end
+```
+
+You can call the various setter wherever you want, like:
 ```objective-c
 [self.navigationController.navigationBar useBackgroundColor:[UIColor blueColor]];
 ```
 
-Step three: in `viewWillDisappear` reset the nagivation bar
+
+And usually in `viewWillDisappear`, you should call this method to avoid any side effects:
 ```objective-c
 - (void)viewWillDisappear:(BOOL)animated
 {

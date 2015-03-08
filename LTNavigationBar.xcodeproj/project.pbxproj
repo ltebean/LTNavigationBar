@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		FA32D3EB1A90ABF500E2E4D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA32D3EA1A90ABF500E2E4D7 /* main.m */; };
 		FA32D3EE1A90ABF500E2E4D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA32D3ED1A90ABF500E2E4D7 /* AppDelegate.m */; };
-		FA32D3F11A90ABF500E2E4D7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA32D3F01A90ABF500E2E4D7 /* ViewController.m */; };
+		FA32D3F11A90ABF500E2E4D7 /* BGColorDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA32D3F01A90ABF500E2E4D7 /* BGColorDemoViewController.m */; };
 		FA32D3F41A90ABF500E2E4D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA32D3F21A90ABF500E2E4D7 /* Main.storyboard */; };
 		FA32D3F61A90ABF500E2E4D7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA32D3F51A90ABF500E2E4D7 /* Images.xcassets */; };
 		FA32D3F91A90ABF500E2E4D7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA32D3F71A90ABF500E2E4D7 /* LaunchScreen.xib */; };
 		FA32D4051A90ABF500E2E4D7 /* LTNavigationBarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA32D4041A90ABF500E2E4D7 /* LTNavigationBarTests.m */; };
-		FA32D4141A90ACD600E2E4D7 /* UINavigationBar+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = FA32D4131A90ACD600E2E4D7 /* UINavigationBar+BackgroundColor.m */; };
+		FA32D4141A90ACD600E2E4D7 /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = FA32D4131A90ACD600E2E4D7 /* UINavigationBar+Awesome.m */; };
 		FA32D4191A90B29A00E2E4D7 /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA32D4181A90B29A00E2E4D7 /* bg.jpg */; };
+		FA6B24B21AAC401600DF4B96 /* ScrollingNavbarDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6B24B11AAC401600DF4B96 /* ScrollingNavbarDemoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,17 +35,19 @@
 		FA32D3EA1A90ABF500E2E4D7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FA32D3EC1A90ABF500E2E4D7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FA32D3ED1A90ABF500E2E4D7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FA32D3EF1A90ABF500E2E4D7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FA32D3F01A90ABF500E2E4D7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FA32D3EF1A90ABF500E2E4D7 /* BGColorDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BGColorDemoViewController.h; sourceTree = "<group>"; };
+		FA32D3F01A90ABF500E2E4D7 /* BGColorDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BGColorDemoViewController.m; sourceTree = "<group>"; };
 		FA32D3F31A90ABF500E2E4D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA32D3F51A90ABF500E2E4D7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FA32D3F81A90ABF500E2E4D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		FA32D3FE1A90ABF500E2E4D7 /* LTNavigationBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LTNavigationBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA32D4031A90ABF500E2E4D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA32D4041A90ABF500E2E4D7 /* LTNavigationBarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTNavigationBarTests.m; sourceTree = "<group>"; };
-		FA32D4121A90ACD600E2E4D7 /* UINavigationBar+BackgroundColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+BackgroundColor.h"; sourceTree = "<group>"; };
-		FA32D4131A90ACD600E2E4D7 /* UINavigationBar+BackgroundColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+BackgroundColor.m"; sourceTree = "<group>"; };
+		FA32D4121A90ACD600E2E4D7 /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
+		FA32D4131A90ACD600E2E4D7 /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
 		FA32D4181A90B29A00E2E4D7 /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
+		FA6B24B01AAC401600DF4B96 /* ScrollingNavbarDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollingNavbarDemoViewController.h; sourceTree = "<group>"; };
+		FA6B24B11AAC401600DF4B96 /* ScrollingNavbarDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollingNavbarDemoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +92,10 @@
 				FA32D40E1A90ABFB00E2E4D7 /* lib */,
 				FA32D3EC1A90ABF500E2E4D7 /* AppDelegate.h */,
 				FA32D3ED1A90ABF500E2E4D7 /* AppDelegate.m */,
-				FA32D3EF1A90ABF500E2E4D7 /* ViewController.h */,
-				FA32D3F01A90ABF500E2E4D7 /* ViewController.m */,
+				FA32D3EF1A90ABF500E2E4D7 /* BGColorDemoViewController.h */,
+				FA32D3F01A90ABF500E2E4D7 /* BGColorDemoViewController.m */,
+				FA6B24B01AAC401600DF4B96 /* ScrollingNavbarDemoViewController.h */,
+				FA6B24B11AAC401600DF4B96 /* ScrollingNavbarDemoViewController.m */,
 				FA32D3F21A90ABF500E2E4D7 /* Main.storyboard */,
 				FA32D3F51A90ABF500E2E4D7 /* Images.xcassets */,
 				FA32D3F71A90ABF500E2E4D7 /* LaunchScreen.xib */,
@@ -129,8 +134,8 @@
 		FA32D40E1A90ABFB00E2E4D7 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				FA32D4121A90ACD600E2E4D7 /* UINavigationBar+BackgroundColor.h */,
-				FA32D4131A90ACD600E2E4D7 /* UINavigationBar+BackgroundColor.m */,
+				FA32D4121A90ACD600E2E4D7 /* UINavigationBar+Awesome.h */,
+				FA32D4131A90ACD600E2E4D7 /* UINavigationBar+Awesome.m */,
 			);
 			name = lib;
 			sourceTree = "<group>";
@@ -244,10 +249,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA32D3F11A90ABF500E2E4D7 /* ViewController.m in Sources */,
+				FA32D3F11A90ABF500E2E4D7 /* BGColorDemoViewController.m in Sources */,
+				FA6B24B21AAC401600DF4B96 /* ScrollingNavbarDemoViewController.m in Sources */,
 				FA32D3EE1A90ABF500E2E4D7 /* AppDelegate.m in Sources */,
 				FA32D3EB1A90ABF500E2E4D7 /* main.m in Sources */,
-				FA32D4141A90ACD600E2E4D7 /* UINavigationBar+BackgroundColor.m in Sources */,
+				FA32D4141A90ACD600E2E4D7 /* UINavigationBar+Awesome.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
