@@ -31,7 +31,7 @@ The category includes lots of method that helps to change UINavigationBar's appe
 
 You can call the various setter wherever you want, like:
 ```objective-c
-[self.navigationController.navigationBar lt_setContentAlpha:[UIColor blueColor]];
+[self.navigationController.navigationBar lt_setBackgroundColor:[UIColor blueColor]];
 ```
 
 And usually in `viewWillDisappear`, you should call this method to avoid any side effects:
