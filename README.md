@@ -5,11 +5,11 @@ It is hard to change the appearance of UINavigationBar dynamically, so I made th
 
 
 ## Demo
-#### 1.changing the background:
+#### 1. Changing the background:
 ![LTNavigationbar](https://raw.githubusercontent.com/ltebean/LTNavigationBar/master/images/demo.gif)
 
 
-#### 2.Making navigation bar scroll along with a scroll view:
+#### 2. Making navigation bar scroll along with a scroll view:
 ![LTNavigationbar](https://raw.githubusercontent.com/ltebean/LTNavigationBar/master/images/demo2.gif)
 
 ## Usage
@@ -31,9 +31,8 @@ The category includes lots of method that helps to change UINavigationBar's appe
 
 You can call the various setter wherever you want, like:
 ```objective-c
-[self.navigationController.navigationBar useBackgroundColor:[UIColor blueColor]];
+[self.navigationController.navigationBar lt_setContentAlpha:[UIColor blueColor]];
 ```
-
 
 And usually in `viewWillDisappear`, you should call this method to avoid any side effects:
 ```objective-c
