@@ -1,9 +1,9 @@
 //
-//  UINavigationBar+BackgroundColor.h
-//  SuiXiang
+//  UINavigationBar+Awesome.h
+//  LTNavigationBar
 //
 //  Created by ltebean on 15-2-15.
-//  Copyright (c) 2015年 ltebean. All rights reserved.
+//  Copyright (c) 2015 ltebean. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

@@ -1,14 +1,13 @@
 //
-//  UINavigationBar+BackgroundColor.m
-//  SuiXiang
+//  UINavigationBar+Awesome.m
+//  LTNavigationBar
 //
 //  Created by ltebean on 15-2-15.
-//  Copyright (c) 2015年 ltebean. All rights reserved.
+//  Copyright (c) 2015 ltebean. All rights reserved.
 //
 
 #import "UINavigationBar+Awesome.h"
 #import <objc/runtime.h>
-
 
 @implementation UINavigationBar (Awesome)
 static char overlayKey;
@@ -41,6 +40,7 @@ static char emptyImageKey;
         [self setShadowImage:[UIImage new]];
         self.overlay = [[UIView alloc] initWithFrame:CGRectMake(0, -20, [UIScreen mainScreen].bounds.size.width, 64)];
         self.overlay.userInteractionEnabled = NO;
+        self.overlay.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
         [self insertSubview:self.overlay atIndex:0];
     }
     self.overlay.backgroundColor = backgroundColor;
