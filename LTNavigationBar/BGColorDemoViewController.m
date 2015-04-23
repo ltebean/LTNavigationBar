@@ -20,7 +20,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [self.navigationController.navigationBar setShadowImage:[UIImage new]];
 
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -45,6 +44,8 @@
 {
     [super viewWillAppear:YES];
     [self scrollViewDidScroll:self.tableView];
+    [self.navigationController.navigationBar setShadowImage:[UIImage new]];
+
 }
 
 - (void)viewWillDisappear:(BOOL)animated
