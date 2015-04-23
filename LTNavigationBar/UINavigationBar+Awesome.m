@@ -37,7 +37,6 @@ static char emptyImageKey;
 {
     if (!self.overlay) {
         [self setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
-        [self setShadowImage:[UIImage new]];
         self.overlay = [[UIView alloc] initWithFrame:CGRectMake(0, -20, [UIScreen mainScreen].bounds.size.width, 64)];
         self.overlay.userInteractionEnabled = NO;
         self.overlay.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;

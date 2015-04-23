@@ -20,6 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [self.navigationController.navigationBar setShadowImage:[UIImage new]];
+
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
