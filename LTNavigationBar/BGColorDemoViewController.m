@@ -12,6 +12,8 @@
 #define NAVBAR_CHANGE_POINT 50
 
 @interface BGColorDemoViewController ()<UITableViewDataSource,UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UIView *topView;
+@property (weak, nonatomic) IBOutlet UIImageView *topImageView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end
 
@@ -25,6 +27,7 @@
     self.tableView.dataSource = self;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
     [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor clearColor]];
+    [self.topView.superview sendSubviewToBack:self.topView];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
@@ -35,8 +38,14 @@
         CGFloat alpha = 1 - ((NAVBAR_CHANGE_POINT + 64 - offsetY) / 64);
         
         [self.navigationController.navigationBar lt_setBackgroundColor:[color colorWithAlphaComponent:alpha]];
+        
     } else {
         [self.navigationController.navigationBar lt_setBackgroundColor:[color colorWithAlphaComponent:0]];
+    }
+    
+    if (offsetY < 0) {
+        CGFloat progress = fabs(offsetY) / 300;
+        self.topImageView.transform = CGAffineTransformMakeScale(1 + progress, 1 + progress);
     }
 }
 

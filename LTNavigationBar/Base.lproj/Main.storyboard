@@ -1,29 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A388b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="r1i-pR-mnD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A388b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="r1i-pR-mnD">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Title-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="vXZ-lx-hvc" customClass="BGColorDemoViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ol6-pv-3ev">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ol6-pv-3ev">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg.jpg" id="982-4M-Fxk">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="223"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="IG1-Ta-L6I">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="212"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                </imageView>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg.jpg" id="982-4M-Fxk">
+                                            <rect key="frame" x="0.0" y="-89" width="320" height="307"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="T8Y-og-A43" style="IBUITableViewCellStyleDefault" id="bN5-oq-e1N">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -43,12 +46,6 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="ol6-pv-3ev" secondAttribute="trailing" constant="-16" id="3SJ-yy-OpP"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ol6-pv-3ev" secondAttribute="bottom" id="Ok8-Xm-KfZ"/>
-                            <constraint firstItem="ol6-pv-3ev" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-64" id="tpl-A3-1L6"/>
-                            <constraint firstItem="ol6-pv-3ev" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="zrI-Fs-jIg"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="eEc-lS-ow6">
                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="M6l-T2-mFM">
@@ -63,6 +60,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="ol6-pv-3ev" id="j1g-eS-4u1"/>
+                        <outlet property="topImageView" destination="982-4M-Fxk" id="tqh-fV-teD"/>
+                        <outlet property="topView" destination="IG1-Ta-L6I" id="MFz-L1-BEu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -73,10 +72,6 @@
         <scene sceneID="09z-n3-nQZ">
             <objects>
                 <viewController id="xqZ-yo-i0i" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="n15-dg-Z9Z"/>
-                        <viewControllerLayoutGuide type="bottom" id="1wR-b2-lbj"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5Or-1G-CWm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -111,20 +106,17 @@
         <scene sceneID="FSW-9n-0CZ">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="yKC-WS-Q4W" customClass="ScrollingNavbarDemoViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xIv-BB-hMn"/>
-                        <viewControllerLayoutGuide type="bottom" id="2Ug-zk-1Gx"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="e9l-sS-T8G">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ywl-LE-mp3">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Ywl-LE-mp3">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg.jpg" id="eNZ-sc-ljC">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="223"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 </imageView>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="ECL-Pp-JyS" style="IBUITableViewCellStyleDefault" id="kkz-WZ-qQT">
@@ -145,12 +137,6 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Ywl-LE-mp3" firstAttribute="top" secondItem="xIv-BB-hMn" secondAttribute="bottom" constant="-64" id="Rrz-pS-6Fl"/>
-                            <constraint firstItem="Ywl-LE-mp3" firstAttribute="leading" secondItem="e9l-sS-T8G" secondAttribute="leadingMargin" constant="-16" id="VEV-n2-Hvg"/>
-                            <constraint firstItem="2Ug-zk-1Gx" firstAttribute="top" secondItem="Ywl-LE-mp3" secondAttribute="bottom" id="icb-oD-3iZ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Ywl-LE-mp3" secondAttribute="trailing" constant="-16" id="nty-0d-0BH"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="zDd-Se-Qp6">
                         <barButtonItem key="leftBarButtonItem" title="button" id="34V-cE-8RG"/>
