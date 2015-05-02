@@ -8,22 +8,34 @@
         <!--Title-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="vXZ-lx-hvc" customClass="BGColorDemoViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="BGColorDemoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ol6-pv-3ev">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ol6-pv-3ev">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg.jpg" id="982-4M-Fxk">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="223"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="CA6-Ac-93j">
+                                    <rect key="frame" x="0.0" y="64" width="320" height="190"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                </imageView>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="982-4M-Fxk">
+                                            <rect key="frame" x="0.0" y="-64" width="320" height="254"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="982-4M-Fxk" firstAttribute="leading" secondItem="CA6-Ac-93j" secondAttribute="leading" id="K4V-ol-kWT"/>
+                                        <constraint firstAttribute="trailing" secondItem="982-4M-Fxk" secondAttribute="trailing" id="Qaz-mA-OQA"/>
+                                        <constraint firstItem="982-4M-Fxk" firstAttribute="top" secondItem="CA6-Ac-93j" secondAttribute="top" constant="-64" id="dBf-UH-eDS"/>
+                                        <constraint firstAttribute="bottom" secondItem="982-4M-Fxk" secondAttribute="bottom" id="nTQ-eO-PdO"/>
+                                    </constraints>
+                                </view>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="T8Y-og-A43" style="IBUITableViewCellStyleDefault" id="bN5-oq-e1N">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -45,8 +57,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="ol6-pv-3ev" secondAttribute="trailing" constant="-16" id="3SJ-yy-OpP"/>
+                            <constraint firstItem="ol6-pv-3ev" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="5EZ-ni-Hkp"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ol6-pv-3ev" secondAttribute="bottom" id="Ok8-Xm-KfZ"/>
-                            <constraint firstItem="ol6-pv-3ev" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-64" id="tpl-A3-1L6"/>
                             <constraint firstItem="ol6-pv-3ev" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="zrI-Fs-jIg"/>
                         </constraints>
                     </view>
