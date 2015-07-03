@@ -78,8 +78,6 @@ static char emptyImageKey;
 - (void)lt_reset
 {
     [self setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
-    [self setShadowImage:nil];
-
     [self.overlay removeFromSuperview];
     self.overlay = nil;
 }
