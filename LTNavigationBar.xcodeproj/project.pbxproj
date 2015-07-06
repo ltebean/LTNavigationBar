@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		964C40D91B4AABC30018206D /* NormalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 964C40D71B4AABC30018206D /* NormalViewController.m */; };
+		964C40DA1B4AABC30018206D /* NormalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 964C40D81B4AABC30018206D /* NormalViewController.xib */; };
 		FA32D3EB1A90ABF500E2E4D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA32D3EA1A90ABF500E2E4D7 /* main.m */; };
 		FA32D3EE1A90ABF500E2E4D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA32D3ED1A90ABF500E2E4D7 /* AppDelegate.m */; };
 		FA32D3F11A90ABF500E2E4D7 /* BGColorDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA32D3F01A90ABF500E2E4D7 /* BGColorDemoViewController.m */; };
@@ -30,6 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		964C40D61B4AABC30018206D /* NormalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalViewController.h; sourceTree = "<group>"; };
+		964C40D71B4AABC30018206D /* NormalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalViewController.m; sourceTree = "<group>"; };
+		964C40D81B4AABC30018206D /* NormalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NormalViewController.xib; sourceTree = "<group>"; };
 		FA32D3E51A90ABF500E2E4D7 /* LTNavigationBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LTNavigationBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA32D3E91A90ABF500E2E4D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA32D3EA1A90ABF500E2E4D7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -89,6 +94,9 @@
 		FA32D3E71A90ABF500E2E4D7 /* LTNavigationBar */ = {
 			isa = PBXGroup;
 			children = (
+				964C40D61B4AABC30018206D /* NormalViewController.h */,
+				964C40D71B4AABC30018206D /* NormalViewController.m */,
+				964C40D81B4AABC30018206D /* NormalViewController.xib */,
 				FA32D40E1A90ABFB00E2E4D7 /* lib */,
 				FA32D3EC1A90ABF500E2E4D7 /* AppDelegate.h */,
 				FA32D3ED1A90ABF500E2E4D7 /* AppDelegate.m */,
@@ -230,6 +238,7 @@
 			files = (
 				FA32D4191A90B29A00E2E4D7 /* bg.jpg in Resources */,
 				FA32D3F41A90ABF500E2E4D7 /* Main.storyboard in Resources */,
+				964C40DA1B4AABC30018206D /* NormalViewController.xib in Resources */,
 				FA32D3F91A90ABF500E2E4D7 /* LaunchScreen.xib in Resources */,
 				FA32D3F61A90ABF500E2E4D7 /* Images.xcassets in Resources */,
 			);
@@ -254,6 +263,7 @@
 				FA32D3EE1A90ABF500E2E4D7 /* AppDelegate.m in Sources */,
 				FA32D3EB1A90ABF500E2E4D7 /* main.m in Sources */,
 				FA32D4141A90ACD600E2E4D7 /* UINavigationBar+Awesome.m in Sources */,
+				964C40D91B4AABC30018206D /* NormalViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

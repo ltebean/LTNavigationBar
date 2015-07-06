@@ -8,6 +8,7 @@
 
 #import "BGColorDemoViewController.h"
 #import "UINavigationBar+Awesome.h"
+#import "NormalViewController.h"
 
 #define NAVBAR_CHANGE_POINT 50
 
@@ -23,6 +24,20 @@
     self.tableView.dataSource = self;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
     [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor clearColor]];
+    
+    
+    
+    UIBarButtonItem *pushBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Push"
+                                                                             style:UIBarButtonItemStylePlain
+                                                                            target:self
+                                                                            action:@selector(btnPushPressed:)];
+    self.navigationItem.rightBarButtonItems = @[pushBarButtonItem];
+}
+
+
+- (void)btnPushPressed:(id)sender{
+    NormalViewController *normalViewController = [[NormalViewController alloc] init];
+    [self.navigationController pushViewController:normalViewController animated:YES];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
