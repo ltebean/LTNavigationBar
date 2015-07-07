@@ -6,7 +6,7 @@
 
 这份代码的目的是模仿京东app首页的导航栏效果，首页的导航栏起初为透明的，向上滑动的时候导航栏逐步变色，直至到一个临界点停止变色，向下滑动的时候又逐步恢复为透明的。注意首页的view是全屏展示的，示例代码中是在storyboard里设置了全屏展示，如果是用xib，就需要设置self.automaticallyAdjustsScrollViewInsets为NO了。
 
-上面的效果是实现了，但是在从首页Push到Next VC，再手势返回的时候，导航栏上的动画效果就乱了。我是用各种排除法最终定位到这个问题的根源在于Next VC里面的一行代码：self.edgesForExtendedLayout = UIRectEdgeNone;
+上面的效果是实现了，但是在从首页Push到Next VC（点击首页右上角的Push按钮），再手势返回的时候，导航栏上的动画效果就乱了。我是用各种排除法最终定位到这个问题的根源在于Next VC里面的一行代码：self.edgesForExtendedLayout = UIRectEdgeNone;
 
 手势返回时的混乱动画如下图所示：
 
