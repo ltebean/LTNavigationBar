@@ -9,6 +9,7 @@
 #import "BGColorDemoViewController.h"
 #import "UINavigationBar+Awesome.h"
 #import "NormalViewController.h"
+#import "UINavigationController+FDFullscreenPopGesture.h"
 
 #define NAVBAR_CHANGE_POINT 50
 
@@ -55,6 +56,14 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
+//    self.tableView.delegate = self;
+//    [self scrollViewDidScroll:self.tableView];
+//    [self.navigationController.navigationBar setShadowImage:[UIImage new]];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:YES];
     self.tableView.delegate = self;
     [self scrollViewDidScroll:self.tableView];
     [self.navigationController.navigationBar setShadowImage:[UIImage new]];
