@@ -41,7 +41,7 @@
 - (void)setNavigationBarTransformProgress:(CGFloat)progress
 {
     [self.navigationController.navigationBar lt_setTranslationY:(-44 * progress)];
-    [self.navigationController.navigationBar lt_setContentAlpha:(1-progress)];
+    [self.navigationController.navigationBar lt_setElementsAlpha:(1-progress)];
 }
 
 - (void)viewWillAppear:(BOOL)animated
