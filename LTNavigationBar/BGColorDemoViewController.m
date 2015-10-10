@@ -27,26 +27,24 @@
     self.tableView.dataSource = self;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
     [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor clearColor]];
-    [self.topView.superview sendSubviewToBack:self.topView];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    UIColor * color = [UIColor colorWithRed:0/255.0 green:175/255.0 blue:240/255.0 alpha:1];
+
     CGFloat offsetY = scrollView.contentOffset.y;
-    if (offsetY > NAVBAR_CHANGE_POINT) {
-        CGFloat alpha = 1 - ((NAVBAR_CHANGE_POINT + 64 - offsetY) / 64);
-        
-        [self.navigationController.navigationBar lt_setBackgroundColor:[color colorWithAlphaComponent:alpha]];
-        
-    } else {
-        [self.navigationController.navigationBar lt_setBackgroundColor:[color colorWithAlphaComponent:0]];
+    
+    CGAffineTransform transform = CGAffineTransformIdentity;
+    if (offsetY < 0) {
+        CGFloat progress = fabs(offsetY) / 200;
+        transform = CGAffineTransformScale(transform, 1 + progress, 1 + progress);
+        transform = CGAffineTransformTranslate(transform, 0, offsetY / 2);
     }
     
-    if (offsetY < 0) {
-        CGFloat progress = fabs(offsetY) / 300;
-        self.topImageView.transform = CGAffineTransformMakeScale(1 + progress, 1 + progress);
+    else if (offsetY >= 220 - 64) {
+        transform = CGAffineTransformTranslate(transform, 0, offsetY - (220 - 64));
     }
+    self.topImageView.transform = transform;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -67,7 +65,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return 20;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
