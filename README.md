@@ -1,5 +1,8 @@
 ![LTNavigationbar](https://cocoapod-badges.herokuapp.com/v/LTNavigationBar/badge.png)
 
+## Fix Bugs
+Delete the blanks of multi sections of table view in "TranslationChangeController.h"
+
 ## Purpose
 It is hard to change the appearance of UINavigationBar dynamically, so I made this lib to make the job easy.
 
