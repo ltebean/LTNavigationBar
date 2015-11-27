@@ -79,6 +79,10 @@
     return 65;
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return @"header";
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

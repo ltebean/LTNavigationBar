@@ -29,11 +29,14 @@
     if (offsetY > 0) {
         if (offsetY >= 44) {
             [self setNavigationBarTransformProgress:1];
+            scrollView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
         } else {
             [self setNavigationBarTransformProgress:(offsetY / 44)];
+            scrollView.contentInset = UIEdgeInsetsMake(20 + offsetY, 0, 0, 0);
         }
     } else {
         [self setNavigationBarTransformProgress:0];
+        scrollView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
         self.navigationController.navigationBar.backIndicatorImage = [UIImage new];
     }
 }
@@ -59,12 +62,12 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return 6;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -80,5 +83,9 @@
     return 65;
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return @"header";
+}
 
 @end
