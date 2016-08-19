@@ -9,8 +9,12 @@
 #import "UINavigationBar+Awesome.h"
 #import <objc/runtime.h>
 
+
+
 @implementation UINavigationBar (Awesome)
 static char overlayKey;
+static UIColor *color;
+static bool translucent;
 
 - (UIView *)overlay
 {
@@ -25,6 +29,10 @@ static char overlayKey;
 - (void)lt_setBackgroundColor:(UIColor *)backgroundColor
 {
     if (!self.overlay) {
+        translucent = self.translucent;
+        color = self.backgroundColor;
+        [self setBackgroundColor:[UIColor clearColor]];
+        [self setTranslucent:YES];
         [self setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
         self.overlay = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds) + 20)];
         self.overlay.userInteractionEnabled = NO;
@@ -65,6 +73,8 @@ static char overlayKey;
     [self setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
     [self.overlay removeFromSuperview];
     self.overlay = nil;
+    self.backgroundColor = color;
+    self.translucent = translucent;
 }
 
 @end
