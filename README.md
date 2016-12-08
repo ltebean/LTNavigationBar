@@ -1,5 +1,9 @@
 ![LTNavigationbar](https://cocoapod-badges.herokuapp.com/v/LTNavigationBar/badge.png)
 
+
+# swift 3.0 version 
+
+
 ## Purpose
 It is hard to change the appearance of UINavigationBar dynamically, so I made this lib to make the job easy.
 
@@ -14,33 +18,29 @@ It is hard to change the appearance of UINavigationBar dynamically, so I made th
 
 ## Usage
 
-First, import this lib:
-```objective-c
-#import "UINavigationBar+Awesome.h"
-```
+- drag UINavigationBarExtension.swift file to project
 
-The category includes lots of method that helps to change UINavigationBar's appearance dynamically:
-```objective-c
-@interface UINavigationBar (Awesome)
-- (void)lt_setBackgroundColor:(UIColor *)backgroundColor;
-- (void)lt_setElementsAlpha:(CGFloat)alpha;
-- (void)lt_setTranslationY:(CGFloat)translationY;
-- (void)lt_reset;
-@end
+The Extension includes lots of method that helps to change UINavigationBar's appearance dynamically:
+
+```swift
+func lt_setBackgroundColor(backgroundColor: UIColor)
+func lt_setElementsAlpha(alpha: CGFloat)
+func lt_setTranslationY(translationY: CGFloat)
+func lt_reset()
 ```
 
 You can call the various setter wherever you want, like:
-```objective-c
-[self.navigationController.navigationBar lt_setBackgroundColor:[UIColor blueColor]];
+
+```swift
+navigationController.navigationBar.lt_setBackgroundColor(.blueColor)
 ```
 
 And usually in `viewWillDisappear`, you should call this method to avoid any side effects:
-```objective-c
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-    [self.navigationController.navigationBar lt_reset];
+
+```swift
+override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    navigationController.navigationBar.lt_reset()
 }
 ```
-
-See the example for details~ 
+ 
