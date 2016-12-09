@@ -1,6 +1,6 @@
 ![LTNavigationbar](https://cocoapod-badges.herokuapp.com/v/LTNavigationBar/badge.png)
 
-## swift version --> branch swift3.0
+## swift version
 
 [https://github.com/ltebean/LTNavigationBar/tree/swift3.0](https://github.com/ltebean/LTNavigationBar/tree/swift3.0)
 
