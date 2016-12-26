@@ -59,7 +59,7 @@ static char overlayKey;
             obj.alpha = alpha;
         }
         if ([obj isKindOfClass:NSClassFromString(@"_UINavigationBarBackIndicatorView")]) {
-            obj.alpha = obj.alpha == 0 ? 0 : alpha;
+            obj.alpha = alpha;
         }
     }];
 }

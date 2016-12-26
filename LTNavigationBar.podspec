@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "LTNavigationBar"
-  s.version      = "2.1.8"
+  s.version      = "2.1.9"
   s.summary      = "UINavigationBar Category which allows you to change its appearance dynamically"
   s.homepage     = "https://github.com/ltebean/LTNavigationbar"
   s.license      = "MIT"
