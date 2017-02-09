@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A0666A201E4C8DC700B922DC /* LTNavigationBar.h in Headers */ = {isa = PBXBuildFile; fileRef = A0666A1E1E4C8DC700B922DC /* LTNavigationBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A0666A241E4C8E1C00B922DC /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = FA32D4131A90ACD600E2E4D7 /* UINavigationBar+Awesome.m */; };
+		A0666A2F1E4CA34A00B922DC /* UINavigationBar+Awesome.h in Headers */ = {isa = PBXBuildFile; fileRef = FA32D4121A90ACD600E2E4D7 /* UINavigationBar+Awesome.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FA32D3EB1A90ABF500E2E4D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA32D3EA1A90ABF500E2E4D7 /* main.m */; };
 		FA32D3EE1A90ABF500E2E4D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA32D3ED1A90ABF500E2E4D7 /* AppDelegate.m */; };
 		FA32D3F11A90ABF500E2E4D7 /* BGColorDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA32D3F01A90ABF500E2E4D7 /* BGColorDemoViewController.m */; };
@@ -179,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0666A201E4C8DC700B922DC /* LTNavigationBar.h in Headers */,
+				A0666A2F1E4CA34A00B922DC /* UINavigationBar+Awesome.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
