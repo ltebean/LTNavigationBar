@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A0666A201E4C8DC700B922DC /* LTNavigationBarFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = A0666A1E1E4C8DC700B922DC /* LTNavigationBarFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A0666A201E4C8DC700B922DC /* LTNavigationBar.h in Headers */ = {isa = PBXBuildFile; fileRef = A0666A1E1E4C8DC700B922DC /* LTNavigationBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A0666A241E4C8E1C00B922DC /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = FA32D4131A90ACD600E2E4D7 /* UINavigationBar+Awesome.m */; };
 		FA32D3EB1A90ABF500E2E4D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA32D3EA1A90ABF500E2E4D7 /* main.m */; };
 		FA32D3EE1A90ABF500E2E4D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA32D3ED1A90ABF500E2E4D7 /* AppDelegate.m */; };
@@ -33,7 +33,7 @@
 
 /* Begin PBXFileReference section */
 		A0666A1C1E4C8DC700B922DC /* LTNavigationBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LTNavigationBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A0666A1E1E4C8DC700B922DC /* LTNavigationBarFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTNavigationBarFramework.h; sourceTree = "<group>"; };
+		A0666A1E1E4C8DC700B922DC /* LTNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTNavigationBar.h; sourceTree = "<group>"; };
 		A0666A1F1E4C8DC700B922DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA32D3E51A90ABF500E2E4D7 /* LTNavigationBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LTNavigationBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA32D3E91A90ABF500E2E4D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 		A0666A1D1E4C8DC700B922DC /* LTNavigationBarFramework */ = {
 			isa = PBXGroup;
 			children = (
-				A0666A1E1E4C8DC700B922DC /* LTNavigationBarFramework.h */,
+				A0666A1E1E4C8DC700B922DC /* LTNavigationBar.h */,
 				A0666A1F1E4C8DC700B922DC /* Info.plist */,
 			);
 			path = LTNavigationBarFramework;
@@ -178,7 +178,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0666A201E4C8DC700B922DC /* LTNavigationBarFramework.h in Headers */,
+				A0666A201E4C8DC700B922DC /* LTNavigationBar.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,6 +569,7 @@
 				A0666A221E4C8DC700B922DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA32D3E01A90ABF500E2E4D7 /* Build configuration list for PBXProject "LTNavigationBar" */ = {
 			isa = XCConfigurationList;

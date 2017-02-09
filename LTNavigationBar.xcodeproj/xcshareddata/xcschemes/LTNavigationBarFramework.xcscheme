@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A0666A1B1E4C8DC700B922DC"
-               BuildableName = "LTNavigationBarFramework.framework"
+               BuildableName = "LTNavigationBar.framework"
                BlueprintName = "LTNavigationBarFramework"
                ReferencedContainer = "container:LTNavigationBar.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A0666A1B1E4C8DC700B922DC"
-            BuildableName = "LTNavigationBarFramework.framework"
+            BuildableName = "LTNavigationBar.framework"
             BlueprintName = "LTNavigationBarFramework"
             ReferencedContainer = "container:LTNavigationBar.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A0666A1B1E4C8DC700B922DC"
-            BuildableName = "LTNavigationBarFramework.framework"
+            BuildableName = "LTNavigationBar.framework"
             BlueprintName = "LTNavigationBarFramework"
             ReferencedContainer = "container:LTNavigationBar.xcodeproj">
          </BuildableReference>
