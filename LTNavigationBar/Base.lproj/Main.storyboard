@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A388b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="r1i-pR-mnD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="r1i-pR-mnD">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -62,17 +62,7 @@
                             <constraint firstItem="ol6-pv-3ev" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="zrI-Fs-jIg"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="eEc-lS-ow6">
-                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="M6l-T2-mFM">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="UWR-E1-sQ6">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <segue destination="xqZ-yo-i0i" kind="push" id="I9F-by-63w"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Title" id="eEc-lS-ow6"/>
                     <connections>
                         <outlet property="tableView" destination="ol6-pv-3ev" id="j1g-eS-4u1"/>
                     </connections>
@@ -80,25 +70,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1265" y="504"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="09z-n3-nQZ">
-            <objects>
-                <viewController id="xqZ-yo-i0i" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="n15-dg-Z9Z"/>
-                        <viewControllerLayoutGuide type="bottom" id="1wR-b2-lbj"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="5Or-1G-CWm">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="OdV-jx-pH7"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Zsw-vN-AdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1742" y="504"/>
         </scene>
         <!--demo-->
         <scene sceneID="CtY-YE-Et6">
