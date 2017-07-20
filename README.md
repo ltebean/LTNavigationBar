@@ -1,3 +1,6 @@
+![LTNavigationbar](https://cocoapod-badges.herokuapp.com/v/LTNavigationBar/badge.png)
+
+
 ## Deprecated
 This lib uses a hacky way to achieve the result, in the new iOS version, the structure of UINavigation is changed and this lib no longer works anymore, so please check these alternatives:
 
@@ -5,7 +8,6 @@ This lib uses a hacky way to achieve the result, in the new iOS version, the str
 - https://github.com/DanisFabric/RainbowNavigation
 - https://github.com/MoZhouqi/KMNavigationBarTransition
 
-![LTNavigationbar](https://cocoapod-badges.herokuapp.com/v/LTNavigationBar/badge.png)
 
 ## swift version
 
