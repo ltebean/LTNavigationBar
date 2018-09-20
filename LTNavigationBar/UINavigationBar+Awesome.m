@@ -14,12 +14,12 @@
 @implementation UINavigationBar (Awesome)
 static char overlayKey;
 
-- (UIView *)overlay
+- (UIImage *)overlay
 {
     return objc_getAssociatedObject(self, &overlayKey);
 }
 
-- (void)setOverlay:(UIView *)overlay
+- (void)setOverlay:(UIImage *)overlay
 {
     objc_setAssociatedObject(self, &overlayKey, overlay, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
@@ -27,14 +27,18 @@ static char overlayKey;
 - (void)lt_setBackgroundColor:(UIColor *)backgroundColor
 {
     if (!self.overlay) {
-        [self setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
-        CGFloat statusBarHeight = CGRectGetHeight([[UIApplication sharedApplication] statusBarFrame]);
-        self.overlay = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds) + statusBarHeight)];
-        self.overlay.userInteractionEnabled = NO;
-        self.overlay.autoresizingMask = UIViewAutoresizingFlexibleWidth;    // Should not set `UIViewAutoresizingFlexibleHeight`
-        [[self.subviews firstObject] insertSubview:self.overlay atIndex:0];
+        self.overlay = ({
+            CGRect rect = CGRectMake(0.0, 0.0, 1.0, 1.0);
+            UIGraphicsBeginImageContext(rect.size);
+            CGContextRef context = UIGraphicsGetCurrentContext();
+            CGContextSetFillColorWithColor(context, backgroundColor.CGColor);
+            CGContextFillRect(context, rect);
+            UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+            UIGraphicsEndImageContext();
+            image;
+        });
     }
-    self.overlay.backgroundColor = backgroundColor;
+    [self setBackgroundImage:self.overlay forBarMetrics:UIBarMetricsDefault];
 }
 
 - (void)lt_setTranslationY:(CGFloat)translationY
@@ -54,7 +58,7 @@ static char overlayKey;
     
     UIView *titleView = [self valueForKey:@"_titleView"];
     titleView.alpha = alpha;
-//    when viewController first load, the titleView maybe nil
+    //    when viewController first load, the titleView maybe nil
     [[self subviews] enumerateObjectsUsingBlock:^(UIView *obj, NSUInteger idx, BOOL *stop) {
         if ([obj isKindOfClass:NSClassFromString(@"UINavigationItemView")]) {
             obj.alpha = alpha;
@@ -68,7 +72,6 @@ static char overlayKey;
 - (void)lt_reset
 {
     [self setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
-    [self.overlay removeFromSuperview];
     self.overlay = nil;
 }
 
